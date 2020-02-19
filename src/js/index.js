@@ -27,6 +27,9 @@ for (let nodeViewControl of elements.nodesViewControls) {
 elements.splitGutter.addEventListener('mouseup', () => htmlEditor.resize());
 
 elements.runVisualization.addEventListener('click', () => {
+  for (let input of elements.nodesViewControls) {
+    input.checked = true;
+  }
   visualizeDom(htmlEditor);
   elements = initElements();
 });

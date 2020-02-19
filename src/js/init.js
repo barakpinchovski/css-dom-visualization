@@ -27,7 +27,9 @@ const getBaseHtml = () => {
   return `<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="author" content="Barak Pinchovski"/>
         <title>Barak Pinchovski | JS DOM Visualization Playground</title>
+        <link rel="stylesheet" href="some-external-file.css"/>
     </head>
     <body>
         <main>Example Tag</main>
