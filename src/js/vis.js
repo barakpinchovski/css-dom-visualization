@@ -4,7 +4,7 @@ const visualizeDom = (editor) => {
 
   const visElement = document.getElementsByClassName('vis')[0];
 
-  visElement.innerHTML = `<ul class="tree">${visualize(htmlContainer).outerHTML}</ul>`;
+  visElement.innerHTML = `<ul class="tree hide-nbsp-br-nodes">${visualize(htmlContainer).outerHTML}</ul>`;
 };
 
 function visualize(node) {

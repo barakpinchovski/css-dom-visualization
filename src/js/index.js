@@ -28,7 +28,7 @@ elements.splitGutter.addEventListener('mouseup', () => htmlEditor.resize());
 
 elements.runVisualization.addEventListener('click', () => {
   for (let input of elements.nodesViewControls) {
-    input.checked = true;
+    input.checked = input.value !== 'nbsp-br';
   }
   visualizeDom(htmlEditor);
   elements = initElements();
