@@ -39,6 +39,9 @@
     transform: translate(-50%, -50%);
 }
 
+
+.hide-text-nodes .sub-tree.branches > .node-container.text:first-child + .node-container.element:not(:last-child)::before,
+.hide-nbsp-br-nodes .sub-tree.branches > .node-container.nbsp-br:first-child + .node-container.element:not(:last-child)::before,
 .sub-tree.branches > .node-container:first-child::before,
 .sub-tree.branches > .node-container:last-child::after {
     content: '';
@@ -50,6 +53,8 @@
     height: 0;
 }
 
+.hide-text-nodes .sub-tree.branches > .node-container.text:first-child + .node-container.element:not(:last-child)::before,
+.hide-nbsp-br-nodes .sub-tree.branches > .node-container.nbsp-br:first-child + .node-container.element:not(:last-child)::before,
 .sub-tree.branches > .node-container:first-child::before {
     left: 0;
 }
