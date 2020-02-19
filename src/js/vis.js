@@ -1,6 +1,4 @@
-import { nodeTypes } from './consts/node-types';
-
-export const visualizeDom = (editor) => {
+const visualizeDom = (editor) => {
   const htmlContainer = document.createElement('html');
   htmlContainer.innerHTML = editor.getValue();
 

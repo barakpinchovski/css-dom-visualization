@@ -1,6 +1,3 @@
-import { initLibs, getAceEditor } from './init';
-import { visualizeDom } from './vis';
-
 initLibs();
 const htmlEditor = getAceEditor();
 visualizeDom(htmlEditor);

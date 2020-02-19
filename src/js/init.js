@@ -1,11 +1,11 @@
 let editor;
 
-export const initLibs = () => {
+const initLibs = () => {
   initSplit();
   initAce();
 };
 
-export const getAceEditor = () => editor;
+const getAceEditor = () => editor;
 
 const initSplit = () => {
   const split = Split(document.getElementsByClassName('split'), {
