@@ -12,3 +12,7 @@ header h1 {
     font-weight: normal;
     text-shadow: -2px 2px 0 #e3e3e3;
 }
+
+.dark-mode header h1 {
+    text-shadow: -2px 2px 0 #585858;
+}

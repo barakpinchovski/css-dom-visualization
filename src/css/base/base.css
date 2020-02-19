@@ -36,3 +36,7 @@ ul {
 ul, li {
     list-style: none;
 }
+
+a:visited, a:hover, a:focus, a:active {
+    color: var(--x-site-color);
+}
