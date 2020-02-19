@@ -13,6 +13,7 @@ body {
     grid-template-rows: 5% 90%;
     color: var(--x-site-color);
     background-color: var(--x-site-bg-color);
+    overflow: hidden;
 }
 
 body > main  {
