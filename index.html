@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Barak Pinchovski"/>
+    <meta name="description" content="Interactive DOM Tree Visualization"/>
+    <meta name="keywords" content="interactive, dom, tree, visualization, education, js, javascript, html"/>
+    <title>Barak Pinchovski | Interactive DOM Tree Visualization</title>
+    <base href="./"/>
+    <script src="lib/split/split.min.js"></script>
+    <script src="lib/ace/ace.min.js"></script>
+    <script src="lib/ace/modes/mode-html.js"></script>
+    <script src="lib/ace/themes/theme-monokai.js"></script>
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="src/js/index.js" type="module" defer></script>
+    <link rel="stylesheet" href="src/css/styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Interactive CSS Based DOM Visualization</h1>
+    </header>
+    <main>
+        <!-- Top split area including the controls and visualization area -->
+        <section class="split">
+            <!-- Controls -->
+            <aside class="sidebar">
+                <div class="controls">
+                    <h3 class="title">Included Nodes:</h3>
+                    <!-- Element nodes control -->
+                    <div class="control">
+                        <div class="node element"></div>
+                        <figcaption>Element</figcaption>
+                    </div>
+                    <!-- Text nodes control -->
+                    <div class="control">
+                        <input id="toggle-text-nodes" class="control-nodes-view" type="checkbox" checked value="text"/>
+                        <ul>
+                            <li>
+                                <label for="toggle-text-nodes">
+                                    <div class="node text"></div>
+                                    <span>Text</span>
+                                </label>
+                                <ul>
+                                    <li>
+                                        <input id="toggle-nbsp-br-text-nodes" class="control-nodes-view" type="checkbox" checked value="nbsp-br"/>
+                                        <label for="toggle-nbsp-br-text-nodes">↵, spaces</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Comment nodes control -->
+                    <div class="control">
+                        <input id="toggle-comment-nodes" class="control-nodes-view" type="checkbox" checked value="comment"/>
+                        <label for="toggle-comment-nodes">
+                            <div class="node comment"></div>
+                            <span>Comment</span>
+                        </label>
+                    </div>
+                    <!-- Dark mode control -->
+                    <div class="control">
+                        <button class="dark-mode">Toggle Dark Mode</button>
+                    </div>
+                </div>
+            </aside>
+            <!-- Visualization area -->
+            <div class="vis"></div>
+        </section>
+        <!-- Bottom split area including the HTML editor and the visualization run button -->
+        <section class="split">
+            <button class="run-visualization">Run Visualization</button>
+            <div class="editor"></div>
+        </section>
+    </main>
+    <footer>
+        <h2>Created with ☕ and ❤️ by <a href="https://www.linkedin.com/in/barakpinch/" target="_blank" rel="nofollow">Barak Pinchovski</a></h2>
+        <p>
+            <a href="https://ace.c9.io/" target="_blank" rel="nofollow">Editor</a> | <a href="https://split.js.org/" target="_blank" rel="nofollow">Split Panes</a>
+        </p>
+    </footer>
+</body>
+</html>

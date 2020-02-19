@@ -1,0 +1,33 @@
+:root {
+    --dark-color: #272822;
+    
+    --x-site-font: Tahoma;
+    --x-site-color: var(--dark-color);
+    --x-site-bg-color: white;
+    --transition-duration: 0.3s;
+    --transition: all var(--transition-duration) linear;
+}
+
+:root.dark-mode {
+    --x-site-color: white;
+    --x-site-bg-color: var(--dark-color);
+}
+
+.tree, .node {
+    --branch-line-color: var(--x-site-color);
+}
+
+.node {
+    --element-node-bg: lightblue;
+    --text-node-bg: lightsalmon;
+    --comment-node-bg: lightgreen;
+}
+
+.gutter {
+    --bg: #c5c5c5;
+    --border-color: #686868;
+}
+
+.sidebar {
+    --border-color: #686868;
+}

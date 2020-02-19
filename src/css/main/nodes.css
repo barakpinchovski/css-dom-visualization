@@ -1,0 +1,41 @@
+.node {
+    position: relative;
+    font-weight: bold;
+    transition: var(--transition);
+    filter: drop-shadow(8px 8px 10px gray);
+}
+
+.node:hover,
+.node:focus {
+    filter: drop-shadow(8px 8px 10px gray) brightness(1.1);
+}
+
+.node.element {
+    cursor: pointer;
+    background-color: var(--element-node-bg);
+}
+
+.node.text {
+    background-color: var(--text-node-bg);
+}
+
+.node.comment {
+    background-color: var(--comment-node-bg);
+}
+
+.node.collapse::after {
+    content: '+';
+    position: absolute;
+    left: calc(100% + 5px);
+    padding: 0 3px;
+    border: 1px solid var(--x-site-color);
+    border-radius: 20px;
+    color: var(--x-site-color);
+}
+
+.hide-nbsp-br-nodes .node-container.nbsp-br,
+.hide-text-nodes .node-container.text,
+.hide-comment-nodes .node-container.comment,
+.node.element.collapse + .sub-tree {
+    display: none;
+}

@@ -1,0 +1,13 @@
+.sidebar {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--x-site-bg-color);
+}
+
+.sidebar .title {
+    margin: 10px 0;
+}

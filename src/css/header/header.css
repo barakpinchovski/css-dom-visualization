@@ -1,0 +1,14 @@
+body > header {
+    border-bottom: 1px solid var(--x-site-color);
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-shadow: -2px 2px 0 #e3e3e3;
+}

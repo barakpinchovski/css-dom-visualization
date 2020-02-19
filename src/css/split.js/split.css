@@ -1,0 +1,32 @@
+.split {
+    position: relative;
+}
+
+.gutter {
+    position: relative;
+    background: var(--bg);
+    border:  1px solid var(--border-color);
+}
+
+.gutter.gutter-vertical {
+    cursor: n-resize;
+}
+
+.gutter::before {
+    display: block;
+    content: '⇳';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    transition: var(--transition);
+    text-shadow: 0 0 13px var(--border-color);
+    font-size: 2.5em;
+    opacity: 0;
+}
+
+.gutter:focus::before,
+.gutter:hover::before {
+    opacity: 1;
+}

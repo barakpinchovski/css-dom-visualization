@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+            'header'
+            'main'
+            'footer';
+    grid-template-rows: 5% 90%;
+    color: var(--x-site-color);
+    background-color: var(--x-site-bg-color);
+}
+
+body > main  {
+    height: 100%;
+}
+
+body,
+button {
+    font-family: var(--x-site-font, sans-serif);
+}
+
+label,
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}

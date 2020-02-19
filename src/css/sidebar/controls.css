@@ -1,0 +1,58 @@
+.controls .control,
+.controls label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+}
+
+.controls .control ul {
+    width: 100%;
+}
+
+.controls .control input[type="checkbox"].inactive + ul .node,
+.controls .control input[type="checkbox"].inactive + label .node {
+    background-color: transparent;
+}
+
+.controls label[for="toggle-text-nodes"] + ul > li {
+    margin-top: 10px;
+}
+
+.controls .control input[type="checkbox"]:not([value="nbsp-br"]) {
+    display: none;
+}
+
+.controls .control input[type="checkbox"][value="nbsp-br"] + label {
+    display: inline;
+}
+
+.controls .node {
+    width: 30px;
+    height: 30px;
+    margin: 5px 15px;
+    cursor: default;
+    transition: none;
+}
+
+.controls .node:not(.element) {
+    cursor: pointer;
+}
+
+.controls .node::before,
+.controls .node::after {
+    display: none;
+}
+
+.controls .dark-mode {
+    display: block;
+    margin: 30px auto 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.controls .dark-mode:hover,
+.controls .dark-mode:focus {
+    color: var(--x-site-bg-color);
+    background-color: var(--x-site-color);
+}

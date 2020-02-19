@@ -1,0 +1,19 @@
+footer {
+    padding: 3px 0;
+}
+
+footer h2,
+footer p {
+    margin: 0;
+    text-align: center;
+    
+}
+footer h2 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+footer p {
+    margin-top: 3px;
+    font-size: 0.8em;
+}
