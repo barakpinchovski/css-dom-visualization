@@ -58,7 +58,7 @@ function createTextListItem(node) {
     li.classList.add('nbsp-br');
     nodeText = node.nodeValue.includes('\n') ? '&crarr;' : 'space';
   }
-  li.innerHTML = `<button class="node text" title="${nodeText}">
+  li.innerHTML = `<button class="node text" title="${nodeText.replace(/"/gm, '\'\'')}">
 <span class="data">${nodeText}</span>
 </button>`;
   return li;
@@ -67,7 +67,7 @@ function createTextListItem(node) {
 function createCommentListItem(node) {
   const li = document.createElement('li');
   li.classList.add('node-container', 'comment');
-  li.innerHTML = `<button class="node comment" title="${node.nodeValue}">
+  li.innerHTML = `<button class="node comment" title="${node.nodeValue.replace(/"/gm, '\'\'')}">
 <span class="data">${node.nodeValue}</span>
 </button>`;
   return li;
