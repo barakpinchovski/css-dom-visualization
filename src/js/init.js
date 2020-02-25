@@ -34,12 +34,12 @@ const getBaseHtml = () => {
     <body>
         <main>Example Tag</main>
         <!-- Example comment -->
+        <script>
+            alert('Script tag visualization');
+            // Do Something...
+        </script>
+        <script src="some-external-file.js"></script>
     </body>
-    <script>
-        alert('Script tag visualization');
-        // Do Something...
-    </script>
-    <script src="some-external-file.js"></script>
 </html>
   `;
 };
