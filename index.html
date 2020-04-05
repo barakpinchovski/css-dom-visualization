@@ -31,53 +31,43 @@
     <main>
         <!-- Top split area including the controls and visualization area -->
         <section class="split">
-            <!-- Controls -->
-            <aside class="sidebar">
-                <div class="controls">
-                    <h3 class="title">Included Nodes:</h3>
-                    <!-- Element nodes control -->
-                    <div class="control">
-                        <div class="node element"></div>
-                        <figcaption>Element</figcaption>
-                    </div>
-                    <!-- Text nodes control -->
-                    <div class="control">
-                        <input id="toggle-text-nodes" class="control-nodes-view" type="checkbox" checked value="text"/>
-                        <ul>
-                            <li>
-                                <label for="toggle-text-nodes">
-                                    <div class="node text"></div>
-                                    <span>Text</span>
-                                </label>
-                                <ul>
-                                    <li>
-                                        <input id="toggle-nbsp-br-text-nodes" class="control-nodes-view" type="checkbox" value="nbsp-br"/>
-                                        <label for="toggle-nbsp-br-text-nodes">↵, spaces</label>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Comment nodes control -->
-                    <div class="control">
-                        <input id="toggle-comment-nodes" class="control-nodes-view" type="checkbox" checked value="comment"/>
-                        <label for="toggle-comment-nodes">
-                            <div class="node comment"></div>
-                            <span>Comment</span>
-                        </label>
-                    </div>
-                    <!-- Dark mode control -->
-                    <div class="control">
-                        <button class="dark-mode">Toggle Dark Mode</button>
-                    </div>
-                </div>
-            </aside>
             <!-- Visualization area -->
             <div class="vis"></div>
         </section>
         <!-- Bottom split area including the HTML editor and the visualization run button -->
         <section class="split">
-            <button class="run-visualization">Run Visualization</button>
+            <div class="controls">
+                <button class="run-visualization" title="Run Visualization" aria-label="Run Visualization">&#9658;</button>
+                <!-- Dark mode control -->
+                <div class="control">
+                    <button class="dark-mode" title="Toggle Dark Mode" aria-label="Toggle Dark Mode"></button>
+                </div>
+                
+                <!-- Element nodes control -->
+                <div class="control" title="Element Node" aria-label="Element Node">
+                    <div class="node element"></div>
+                </div>
+                <!-- Text nodes control -->
+                <div class="control">
+                    <input id="toggle-text-nodes" class="control-nodes-view" type="checkbox" checked value="text"/>
+                    <ul>
+                        <li>
+                            <label for="toggle-text-nodes" title="Toggle Text Nodes" aria-label="Toggle Text Nodes">
+                                <div class="node text"></div>
+                            </label>
+                            <input id="toggle-nbsp-br-text-nodes" class="control-nodes-view" type="checkbox" value="nbsp-br"/>
+                            <label for="toggle-nbsp-br-text-nodes" title="Toggle Enter and Spaces Nodes" aria-label="Toggle Enter and Spaces Nodes"></label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Comment nodes control -->
+                <div class="control" title="Toggle Comment Nodes" aria-label="Toggle Comment Nodes">
+                    <input id="toggle-comment-nodes" class="control-nodes-view" type="checkbox" checked value="comment"/>
+                    <label for="toggle-comment-nodes">
+                        <div class="node comment"></div>
+                    </label>
+                </div>
+            </div>
             <div class="editor"></div>
         </section>
     </main>

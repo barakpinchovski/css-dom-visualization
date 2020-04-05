@@ -1,7 +1,7 @@
 initLibs();
 const htmlEditor = getAceEditor();
-visualizeDom(htmlEditor);
 let elements = initElements();
+runVisualization();
 
 /* Utility Functions */
 function initElements() {
@@ -19,6 +19,14 @@ function toggleNodes(e) {
   elements.treeRoot.classList.toggle(`hide-${e.target.value}-nodes`);
 }
 
+function runVisualization() {
+  for (let input of elements.nodesViewControls) {
+    input.checked = input.value !== 'nbsp-br';
+  }
+  visualizeDom(htmlEditor);
+  elements = initElements();
+}
+
 /* Event listeners */
 for (let nodeViewControl of elements.nodesViewControls) {
   nodeViewControl.addEventListener('change', toggleNodes);
@@ -26,12 +34,8 @@ for (let nodeViewControl of elements.nodesViewControls) {
 
 elements.splitGutter.addEventListener('mouseup', () => htmlEditor.resize());
 
-elements.runVisualization.addEventListener('click', () => {
-  for (let input of elements.nodesViewControls) {
-    input.checked = input.value !== 'nbsp-br';
-  }
-  visualizeDom(htmlEditor);
-  elements = initElements();
-});
+elements.runVisualization.addEventListener('click', () => runVisualization() );
 
 elements.darkMode.addEventListener('click', () => document.documentElement.classList.toggle('dark-mode'));
+
+htmlEditor.addEventListener('change', () => console.log('changed'));

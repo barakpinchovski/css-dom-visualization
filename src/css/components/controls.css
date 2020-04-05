@@ -1,0 +1,130 @@
+.controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    padding: 5px 30px;
+    opacity: 0.7;
+    transform: translate(-50%, -2%);
+    transition: opacity var(--transition-duration) linear;
+    border-top: 0;
+    border-radius: 0 0 20px 20px;
+    background-color: #c5c5c5;
+}
+
+.controls:hover,
+.controls:focus {
+    opacity: 1;
+}
+
+.controls .run-visualization {
+    padding: 0 9px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    color: var(--x-site-color, white);
+    background: var(--x-site-bg-color);
+    border: 1px solid var(--x-site-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.controls .run-visualization:hover,
+.controls .run-visualization:focus {
+    color: var(--x-site-bg-color, white);
+    background: var(--x-site-color);
+    border: 1px solid var(--x-site-bg-color);
+}
+
+.controls .dark-mode {
+    position: relative;
+    padding: 0 9px;
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    color: var(--x-site-color, white);
+    background: var(--x-site-bg-color);
+    border: 1px solid var(--x-site-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.controls .dark-mode::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 125%;
+    background: black;
+}
+
+.controls .dark-mode:hover,
+.controls .dark-mode:focus {
+    color: var(--x-site-bg-color);
+    background-color: var(--x-site-color);
+}
+
+.controls #toggle-nbsp-br-text-nodes {
+    display: none;
+}
+
+.controls #toggle-nbsp-br-text-nodes:checked + label[for="toggle-nbsp-br-text-nodes"] {
+    background: #e81224;
+}
+
+.controls label[for="toggle-nbsp-br-text-nodes"] {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.controls .control,
+.controls label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+.controls .control ul {
+    width: 100%;
+    margin: 0;
+}
+
+.controls .control input[type="checkbox"].inactive + ul .node,
+.controls .control input[type="checkbox"].inactive + label .node {
+    background-color: transparent;
+}
+
+.controls .control input[type="checkbox"]:not([value="nbsp-br"]) {
+    display: none;
+}
+
+.controls .control input[type="checkbox"][value="nbsp-br"] + label {
+    display: inline;
+}
+
+.controls .node {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: default;
+    transition: none;
+}
+
+.controls .node:not(.element) {
+    cursor: pointer;
+}
+
+.controls .node::before,
+.controls .node::after {
+    display: none;
+}

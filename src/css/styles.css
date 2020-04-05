@@ -8,7 +8,6 @@
 @import 'main/vis.css';
 @import 'main/editor.css';
 
-@import 'sidebar/sidebar.css';
-@import 'sidebar/controls.css';
+@import 'components/controls.css';
 
 @import 'split.js/split.css';
