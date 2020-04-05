@@ -37,5 +37,3 @@ elements.splitGutter.addEventListener('mouseup', () => htmlEditor.resize());
 elements.runVisualization.addEventListener('click', () => runVisualization() );
 
 elements.darkMode.addEventListener('click', () => document.documentElement.classList.toggle('dark-mode'));
-
-htmlEditor.addEventListener('change', () => console.log('changed'));
